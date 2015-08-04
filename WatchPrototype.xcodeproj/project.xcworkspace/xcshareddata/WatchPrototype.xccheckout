@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C282A1A5-77BA-400F-B396-3E6CE999FC6C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3DF097ADBCAABF75C3607E14B256467401C33449</key>
+		<string>github.com:manasa884/prototype.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WatchPrototype.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3DF097ADBCAABF75C3607E14B256467401C33449</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:manasa884/prototype.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3DF097ADBCAABF75C3607E14B256467401C33449</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3DF097ADBCAABF75C3607E14B256467401C33449</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WatchPrototype</string>
+		</dict>
+	</array>
+</dict>
+</plist>
