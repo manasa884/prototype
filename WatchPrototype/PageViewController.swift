@@ -37,7 +37,7 @@ class PageViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         let pageContentViewController = self.viewControllerAtIndex(0)
         self.pageViewController.setViewControllers([pageContentViewController!], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
-        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height+40)
         self.addChildViewController(pageViewController)
         self.view.addSubview(pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
@@ -48,8 +48,7 @@ class PageViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationController?.navigationBarHidden = true
-        //self.navigationController?.setToolbarHidden(true, animated: true)
+        self.navigationController?.hidesBarsOnTap = true
         reset()
     }
 
