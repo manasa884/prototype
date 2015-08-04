@@ -37,7 +37,7 @@ class PageViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         let pageContentViewController = self.viewControllerAtIndex(0)
         self.pageViewController.setViewControllers([pageContentViewController!], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
-        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height+40)
+        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
         self.addChildViewController(pageViewController)
         self.view.addSubview(pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
@@ -49,6 +49,13 @@ class PageViewController: UIViewController, UIPageViewControllerDataSource, UIPa
 
         // Do any additional setup after loading the view.
         self.navigationController?.hidesBarsOnTap = true
+        //self.view.backgroundColor = UIColor.clearColor()
+        
+        var pageControl: UIPageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.whiteColor()
+        var blueBackground: UIColor = UIColor(red: (0/255.0), green: (28/255.0), blue: (47/255.0), alpha: 1.0)
+        pageControl.backgroundColor = blueBackground
         reset()
     }
 
