@@ -8,15 +8,45 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchPrototype_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchPrototype_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" title="Cards" id="c97-bg-LCD">
+                        <button alignment="center" verticalAlignment="center" id="faq-eD-8Lo">
+                            <group key="contentGroup" width="1" height="64" alignment="left" layout="vertical" id="JfY-wU-5oe">
+                                <items>
+                                    <imageView width="1" height="42" alignment="center" contentMode="scaleAspectFit" id="b1x-Kj-Erh"/>
+                                    <label alignment="center" verticalAlignment="center" text="   Events" id="mjt-TH-FIo">
+                                        <fontDescription key="font" type="system" pointSize="17"/>
+                                    </label>
+                                </items>
+                            </group>
                             <connections>
-                                <segue destination="sPz-B2-Nll" kind="push" id="vhV-Fd-P6v"/>
+                                <segue destination="sPz-B2-Nll" kind="push" id="T2B-Jx-6Ob"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Notifications" id="4QT-Pu-FTc"/>
+                        <separator alignment="left" verticalAlignment="center" id="pBK-9I-NYW">
+                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <button alignment="center" verticalAlignment="center" id="6SM-iY-HXR">
+                            <group key="contentGroup" width="1" height="64" alignment="left" layout="vertical" id="qqE-ym-LAk">
+                                <items>
+                                    <label alignment="left" id="vPH-fn-cjc">
+                                        <fontDescription key="font" type="system" pointSize="2"/>
+                                    </label>
+                                    <imageView width="1" height="38" alignment="center" contentMode="scaleAspectFit" id="fSN-LB-byz"/>
+                                    <label alignment="center" verticalAlignment="center" text="Notifications" id="pOa-t8-JNP">
+                                        <fontDescription key="font" type="system" pointSize="17"/>
+                                    </label>
+                                </items>
+                            </group>
+                            <connections>
+                                <segue destination="R1K-nX-3Yw" kind="push" id="0pf-Hd-1hM"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="eventIconImage" destination="b1x-Kj-Erh" id="HLu-yU-3Ii"/>
+                        <outlet property="notifIconImage" destination="fSN-LB-byz" id="bni-2Z-pfb"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
@@ -37,6 +67,72 @@
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
         </scene>
+        <!--Notification Table Interface Controller-->
+        <scene sceneID="wMe-pz-jg8">
+            <objects>
+                <controller id="R1K-nX-3Yw" customClass="NotificationTableInterfaceController" customModule="WatchPrototype_WatchKit_Extension">
+                    <items>
+                        <table alignment="center" id="bdg-dZ-g7H">
+                            <items>
+                                <tableRow identifier="NotificationTableRowController" id="ZGm-M4-WEE" customClass="NotificationTableRowController" customModule="WatchPrototype_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="v22-ss-IqY">
+                                        <items>
+                                            <group width="1" alignment="left" id="Vw9-GY-BuR">
+                                                <items>
+                                                    <label alignment="left" text="Label" id="ldQ-Yx-jZX">
+                                                        <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="PRd-5r-aZK">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" id="AGr-E5-tfH"/>
+                                                    <group width="1" alignment="left" layout="vertical" id="oDg-QG-Kch">
+                                                        <items>
+                                                            <label width="99.5" alignment="left" text="Label" id="636-8O-Tad">
+                                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                                            </label>
+                                                            <label alignment="left" text="Label" id="pNe-rJ-HMf">
+                                                                <fontDescription key="font" type="system" pointSize="9"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="cardIconImage" destination="AGr-E5-tfH" id="u2j-vE-a2n"/>
+                                        <outlet property="messageLabel" destination="ldQ-Yx-jZX" id="UV8-I1-PzO"/>
+                                        <outlet property="timeLabel" destination="pNe-rJ-HMf" id="Rrg-B5-gVj"/>
+                                        <outlet property="titleLabel" destination="636-8O-Tad" id="NwS-9v-bXC"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="bdg-dZ-g7H" id="Alq-Mc-yAj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="463" y="411"/>
+        </scene>
+        <!--Summary Card Interface Controller-->
+        <scene sceneID="bbW-SE-ocK">
+            <objects>
+                <controller contentMode="scaleAspectFit" id="KwL-bg-BSS" customClass="SummaryCardInterfaceController" customModule="WatchPrototype_WatchKit_Extension">
+                    <items>
+                        <imageView width="136" height="150" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="m5V-Rw-GYz"/>
+                    </items>
+                    <connections>
+                        <outlet property="summaryCardImage" destination="m5V-Rw-GYz" id="Mjz-JW-tdH"/>
+                        <segue destination="xWX-JL-hDu" kind="relationship" relationship="nextPage" id="6j3-Ga-KjS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="660" y="198"/>
+        </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
@@ -44,12 +140,133 @@
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Call Card Interface Controller-->
+        <scene sceneID="Gmu-9g-Ha2">
+            <objects>
+                <controller id="xWX-JL-hDu" customClass="CallCardInterfaceController" customModule="WatchPrototype_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Call" id="dVw-7X-PvX">
+                            <color key="textColor" red="0.7607843876" green="0.90588241820000004" blue="0.37254902719999999" alpha="1" colorSpace="deviceRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                        </label>
+                        <button alignment="left" id="jQZ-Kk-mcS">
+                            <group key="contentGroup" width="1" alignment="left" id="fbe-sd-aDF">
+                                <items>
+                                    <imageView width="87" height="92" alignment="center" verticalAlignment="center" image="phoneIcon-12.png" contentMode="scaleAspectFit" id="vI4-6S-Laq"/>
+                                </items>
+                            </group>
+                            <connections>
+                                <action selector="callButtonPressed" destination="xWX-JL-hDu" id="dfb-CZ-BMt"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="callCardImage" destination="vI4-6S-Laq" id="WIL-gP-Z0E"/>
+                        <segue destination="KqP-ge-qcm" kind="relationship" relationship="nextPage" id="dfZ-xq-HKF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="815" y="198"/>
+        </scene>
+        <!--Map Card Interface Controller-->
+        <scene sceneID="rhP-cB-UEL">
+            <objects>
+                <controller id="KqP-ge-qcm" customClass="MapCardInterfaceController" customModule="WatchPrototype_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Navigation" id="sZf-JR-r3E">
+                            <color key="textColor" red="0.44779281866427068" green="0.5928102492350501" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                        </label>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="xHC-uJ-Uha">
+                            <items>
+                                <map width="107" height="90" alignment="center" verticalAlignment="center" id="0FT-Y3-jpa"/>
+                                <label alignment="center" verticalAlignment="bottom" text="Sunnyvale, CA" id="mNB-IY-A83">
+                                    <color key="textColor" red="0.44779281869999998" green="0.59281024920000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="mNB-IY-A83" id="xmd-R0-6am"/>
+                        <outlet property="map" destination="0FT-Y3-jpa" id="o73-EC-2o3"/>
+                        <segue destination="FNu-aG-Uhm" kind="relationship" relationship="nextPage" id="xJN-oJ-mEO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="976" y="198"/>
+        </scene>
+        <!--Weather Card Interface Controller-->
+        <scene sceneID="5pP-Px-wZG">
+            <objects>
+                <controller id="FNu-aG-Uhm" customClass="WeatherCardInterfaceController" customModule="WatchPrototype_WatchKit_Extension">
+                    <items>
+                        <imageView width="136" height="154" alignment="left" image="weatherCardW-11.png" id="2wE-b9-83x"/>
+                    </items>
+                    <connections>
+                        <outlet property="weatherCardImage" destination="2wE-b9-83x" id="iN8-0e-DXT"/>
+                        <segue destination="jPG-ys-43k" kind="relationship" relationship="nextPage" id="jae-tM-eR2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1139" y="199.5"/>
+        </scene>
+        <!--Task Card Interface Controller-->
+        <scene sceneID="96a-8k-g30">
+            <objects>
+                <controller id="jPG-ys-43k" customClass="TaskCardInterfaceController" customModule="WatchPrototype_WatchKit_Extension">
+                    <items>
+                        <imageView width="82" height="95" alignment="center" verticalAlignment="center" image="taskCardW-10.png" id="Kc7-cC-Wp5"/>
+                        <label alignment="center" text="Tasks" id="dOY-2k-cti">
+                            <color key="textColor" red="0.71942938267689505" green="0.36236948314652107" blue="0.79247553661616166" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="taskCardImage" destination="Kc7-cC-Wp5" id="wnQ-r8-ROH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1300" y="198"/>
+        </scene>
+        <!--Event Table Interface Controller-->
         <scene sceneID="UbJ-6q-Ono">
             <objects>
-                <controller id="sPz-B2-Nll"/>
+                <controller id="sPz-B2-Nll" customClass="EventTableInterfaceController" customModule="WatchPrototype_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="MXC-D2-bac">
+                            <items>
+                                <tableRow identifier="EventTableRowController" id="oBN-67-Vp9" customClass="EventTableRowController" customModule="WatchPrototype_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="S9i-H3-gn3">
+                                        <items>
+                                            <label alignment="left" text="Title" textAlignment="left" numberOfLines="0" id="YBs-TY-tDc">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                            </label>
+                                            <label height="17" alignment="left" text="time" id="NGX-Z5-n6Q">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="KwL-bg-BSS" kind="modal" id="rcI-3t-A0p"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="eventCell" destination="S9i-H3-gn3" id="2Bi-8w-0bO"/>
+                                        <outlet property="timeLabel" destination="NGX-Z5-n6Q" id="PC4-51-Tt6"/>
+                                        <outlet property="titleLabel" destination="YBs-TY-tDc" id="0za-7S-PrZ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="MXC-D2-bac" id="I9M-2l-Ene"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="432" y="345"/>
+            <point key="canvasLocation" x="463" y="198"/>
         </scene>
     </scenes>
 </document>
